@@ -462,8 +462,15 @@
                         </div>
 
                         <div class="flex items-center mt-2">
+                            <label>직원수</label><input type="text" name="cnt" id="cnt" maxlength="100" required onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">
+                        </div>
+                        <div class="flex items-center mt-2">
                             <label>담당자</label>
                             <input type="text" name="manager" id="manager" title="담당자">
+                        </div>
+                        <div class="flex items-center mt-2">
+                            <label>E-mail</label>
+                            <input type="text" name="email" id="email" maxlength="" title="이메일">
                         </div>
                         <div class="flex items-center mt-2">
                             <label>연락처</label>
@@ -471,9 +478,8 @@
                                    placeholder="연락처(번호만 입력)"
                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                         </div>
-                        <div class="flex items-center mt-2">
-                            <label>E-mail</label>
-                            <input type="text" name="email" id="email" maxlength="" title="이메일">
+                        <div class="flex items-start mt-2">
+                            <label>문의내용</label><textarea rows="3" name="contents" id="contents" required></textarea>
                         </div>
                     </div>
 
@@ -534,6 +540,7 @@
             var spd_userName = $('#manager').val();
             var spd_Cp = $('#contact').val();
             var spd_email = $('#email').val();
+            var spd_cnt = $("input[name='cnt']").val();
 
             if ( bSend_ing ){
                 alert("이미 신청하셨습니다.");
@@ -542,31 +549,40 @@
 
             if (!spd_company) {
                 alert('기업명을 입력해주세요.');
-                $('#spd_company').focus();
+                $('#company').focus();
                 return false;
             }
-
+            if(spd_cnt ==""){
+                alert('직원수를 입력하세요');
+                $("input[name='cnt']").focus();
+                return false;
+            }
             if (!spd_userName) {
                 alert('담당자를 입력해주세요.');
-                $('#spd_userName').focus();
-                return false;
-            }
-
-            if (!spd_Cp) {
-                alert('연락처를 입력해주세요.');
-                $('#spd_Cp').focus();
+                $('#manager').focus();
                 return false;
             }
 
             if (!spd_email) {
                 alert('메일을 입력해주세요.');
-                $('#spd_email').focus();
+                $('#email').focus();
+                return false;
+            }
+
+            if (!spd_Cp) {
+                alert('연락처를 입력해주세요.');
+                $('#contact').focus();
+                return false;
+            }
+            if($("textarea[name='contents']").val() ==""){
+                alert('문의내용을 입력하세요');
+                $("textarea[name='contents']").focus();
                 return false;
             } else {
                 var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/; // 이메일정규식
                 if (!regEmail.test(spd_email)) {
                     alert("올바른 이메일 주소가 아닙니다.");
-                    $("#spd_email").focus();
+                    spd_email.focus();
                     return false;
                 }
             }
