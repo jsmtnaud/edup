@@ -65,12 +65,12 @@
 .floating .tit h4{font-size:1.5rem;font-weight: 700;color:#FCEE21;line-height:1.5;}
 .floating .tit h2{font-family: GmarketSans; font-weight: 700;font-size:2rem;line-height: 2.5rem;}
 .floating .card{border-radius: 10px;padding:15px;color:#fff;}
-.floating label{font-weight: 600;letter-spacing: -0.25;margin-right:10px;line-height: 30px; width:50px;}
+.floating label{font-weight: 600;letter-spacing: -0.25;margin-right:10px;line-height: 30px; width:65px;}
 .floating input[type="text"]{height: 30px;padding:0 0.5rem;line-height: 30px;color:#232F44;border:none; width:20%;}
 .floating input[type="text"]{width: 100%;}
 .floating input[pattern]{width: 60px;}
 .floating input[pattern]+input[pattern]{margin-left:3px;}
-.floating textarea{width:80%;resize:none;color:#232F44;line-height: 1.5rem;padding:0.5rem;border-radius: 0;border:none;}
+.floating textarea{width:100%;resize:none;color:#232F44;line-height: 1.5rem;padding:0.5rem;border-radius: 0;border:none;}
 .floating span{font-size:0.875rem;padding:0.375rem;background-color:#0B3568;border-radius: 2px;cursor:pointer; margin-right:15px;}
 .floating input[type="radio"]{margin-left:20px;}
 .floating input[type="radio"]+label{margin-left:0.5rem;font-size:0.875rem;margin-right:0;}
