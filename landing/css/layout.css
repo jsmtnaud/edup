@@ -30,7 +30,7 @@
 @media (max-width:860px){
     .header{ width: 46%; }
     .header-wrap .logo{width:205px;}
-    .header > li > a{font-size:1.2rem;}
+    .header > li > a{font-size:1.2rem;white-space:nowrap;}
     .header span { display: none;}
 
 }
