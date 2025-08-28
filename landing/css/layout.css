@@ -1,5 +1,12 @@
 .header-wrap{position:fixed;top:0;left:0;width:100vw;background-color: #232F44;color:#fff;height:100px;padding-left:8.88889%;z-index: 99;display:flex;}
 .header{display:flex;height: 100%;align-items: stretch;justify-content: flex-end; width: 70%; }
+
+/* 좌측 메뉴 영역 */
+.header .menu-left { display: flex; align-items: center; gap: 0; }
+.header .menu-left .menu-item { position: relative; }
+.header .menu-left a { color: white; text-decoration: none; font-size: 1.1rem; font-weight: 500; padding: 10px 15px; transition: 0.3s ease-in-out; }
+.header .menu-left a:hover { color: #D8B37D; }
+
 .header > li{display:flex;justify-content: center;align-items: center;}
 .header > li > a{font-size:1.5rem;font-weight: 600;transition:0.3s ease-in-out;}
 .header > li:hover > a{color:#D8B37D;}
