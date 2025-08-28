@@ -4,7 +4,7 @@
 /* 좌측 메뉴 영역 */
 .header .menu-left { display: flex; align-items: center; gap: 0; }
 .header .menu-left .menu-item { position: relative; }
-.header .menu-left a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 10px 15px; transition: 0.3s ease-in-out; }
+.header .menu-left a { text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 10px 15px; transition: 0.3s ease-in-out; }
 .header .menu-left a:hover { color: #D8B37D; }
 
 .header > li{display:flex;justify-content: center;align-items: center;}
