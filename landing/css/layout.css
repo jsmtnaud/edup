@@ -39,7 +39,7 @@
     .header-wrap .logo{width:205px;}
     .header > li > a{font-size:1.2rem;white-space:nowrap;}
     .header span { display: none;}
-
+    .header .menu-left { display: none; }
 }
 
 @keyframes slideDown {
